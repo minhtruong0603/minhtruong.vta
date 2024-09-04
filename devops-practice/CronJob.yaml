@@ -11,5 +11,5 @@ spec:
           containers:
           - name: hello
             image: busybox
-            command: ["hello, K8s!"]
+            command: ["hello, k8s!"]
           restartPolicy: OnFailure
