@@ -8,6 +8,6 @@ spec:
       containers:
       - name: hello
         image: busybox
-        command: ["echo", "hello, k8s!"]
+        command: ["hello, k8s!"]
       restartPolicy: Never
   backoffLimit: 4 
