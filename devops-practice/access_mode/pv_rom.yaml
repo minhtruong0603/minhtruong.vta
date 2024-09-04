@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-rom
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadOnlyMany
+  hostPath:
+    path: /mnt/data/rom
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual

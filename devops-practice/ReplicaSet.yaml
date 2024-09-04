@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: web-app-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+       containers:
+        - name: nginx
+          image: nginx:latest
+          imagePullPolicy: IfNotPresent
+          port:
+        - containerPort: 80
+          name: ''
+       resources:
+          limits:
+            memory: "256Mi"
+            cpu: "128m"
+          requests:
+            memory: "128Mi"
+            cpu: "64m"

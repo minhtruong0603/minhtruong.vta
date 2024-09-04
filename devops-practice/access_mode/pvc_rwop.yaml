@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-rwop
+spec:
+  accessModes:
+    - ReadWriteOncePod
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: manual
