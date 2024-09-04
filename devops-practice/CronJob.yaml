@@ -11,5 +11,5 @@ spec:
           containers:
           - name: hello
             image: busybox
-            command: ["echo", "Hello, Kubernetes!"]
+            command: ["hello, K8s!"]
           restartPolicy: OnFailure
